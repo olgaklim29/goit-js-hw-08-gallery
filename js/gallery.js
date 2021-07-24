@@ -64,12 +64,6 @@ const galleryItems = [
     },
   ];
 
-//   const imagesContainerRef = document.querySelector('.js-gallery');
-//   const lightboxRef = document.querySelector('.lightbox');
-//   const lightboxOverlayRef = document.querySelector('.lightbox__overlay');
-//   const lightboxContentRef = document.querySelector('.lightbox__content');
-//   const lightboxImageRef = document.querySelector('.lightbox__image');
-//   const lightboxButtonRef = document.querySelector('[data-action="close-lightbox"]');
 
   const refs = {
     galleryList: document.querySelector('ul.gallery'),
@@ -131,26 +125,14 @@ const galleryItems = [
       refs.lightbox.classList.add('is-open');
       refs.lightbox.querySelector('.lightbox__image').src = e.target.src;
       refs.lightbox.querySelector('.lightbox__image').alt = e.target.alt;
-//       document.body.style.cssText += `height: 100%;
-//    width: 100%;
-//    position: fixed;
-//    overflow: hidden;`
-  
-//   window.addEventListener('keydown', onEscKeyPress);
-//   window.addEventListener('keydown', onArrowKeyPress);
+
     }
   }
   
   function onCloseHandler(e) {
     if(e.target.nodeName === "I" || e.target.nodeName === "BUTTON") {
       refs.lightbox.classList.remove('is-open');
-//       document.body.style.cssText -= `height: 100%;
-//    width: 100%;
-//    position: fixed;
-//    overflow: hidden;`
-  
-//   window.removeEventListener('keydown', onEscKeyPress);
-//   window.removeEventListener('keydown', onArrowKeyPress);
+
 
     }
   }
@@ -167,14 +149,3 @@ const galleryItems = [
 
 
   
-//   const arrImg = galleryItems.map(el => el.original);
-// function onArrowKeyPress(e) {
-//   const currentImg = arrImg.indexOf(lightboxImageRef.src);
-//   console.log(lightboxImageRef.src)
-//   if (e.code === 'ArrowRight' && currentImg < galleryItems.length - 1) {
-//     lightboxImageRef.src = galleryItems[currentImg + 1].original;
-//   } else if (e.code === 'ArrowLeft' && currentImg > 0) {
-//     lightboxImageRef.src = galleryItems[currentImg - 1].original;
-//   };
-// };
-
