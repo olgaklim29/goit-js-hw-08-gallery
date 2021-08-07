@@ -69,6 +69,7 @@ const galleryItems = [
     galleryList: document.querySelector('ul.gallery'),
     lightbox: document.querySelector('.lightbox'),
     btn: document.querySelector('[data-action="close-lightbox"]')
+    
   };
   
   
@@ -79,8 +80,8 @@ const galleryItems = [
     const img = document.createElement('img');
     
     img.classList.add('gallery__image');
-    img.dataset.source = original;
-    img.src = preview;
+    img.dataset.source = preview;
+    img.src = original;
     img.alt = description;
     
     parent.appendChild(img);
@@ -132,13 +133,13 @@ const galleryItems = [
   function onCloseHandler(e) {
     if(e.target.nodeName === "I" || e.target.nodeName === "BUTTON") {
       refs.lightbox.classList.remove('is-open');
-
-
+      
     }
   }
   
   refs.galleryList.addEventListener('click', onClickHandler);
   refs.btn.addEventListener('click', onCloseHandler);
+  
 
 
 
