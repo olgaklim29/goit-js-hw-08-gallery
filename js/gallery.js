@@ -140,6 +140,7 @@ const galleryItems = [
   refs.galleryList.addEventListener('click', onClickHandler);
   refs.btn.addEventListener('click', onCloseHandler);
   
+  
 
 
 
